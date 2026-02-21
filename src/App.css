@@ -195,3 +195,51 @@ h1 {
 .announcement-empty {
   color: #bdbdbd;
 }
+
+/* 商品分類按鈕區與搜尋欄 */
+.category-search-bar {
+  width: 100%;
+  margin: 0 auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.category-btn {
+  background: #23272a;
+  color: #ffcb5b;
+  border: 1px solid #23272a;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s;
+}
+.category-btn.active {
+  background: #ffcb5b;
+  color: #23272a;
+  border: 1px solid #ffcb5b;
+}
+.category-btn:hover:not(.active) {
+  background: #23272a;
+  color: #ffd97a;
+}
+@media (max-width: 900px) {
+  .category-btn-group {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-btn {
+    padding: 6px 12px;
+    font-size: 0.98rem;
+    border-radius: 6px;
+  }
+}
