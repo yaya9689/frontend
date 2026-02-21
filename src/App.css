@@ -1,3 +1,173 @@
+/* 商品卡片、分頁、按鈕、表單、會員卡片現代化 */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.product-card {
+  background: var(--brand-card);
+  border-radius: 18px;
+  box-shadow: var(--brand-shadow);
+  padding: 24px 20px 20px 20px;
+  width: 320px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.product-tag {
+  background: var(--brand-yellow);
+  color: var(--brand-dark);
+  border-radius: 8px;
+  padding: 2px 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.fav-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.fav-btn.active, .fav-btn:hover {
+  color: #ffcb5b;
+}
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.product-info {
+  width: 100%;
+}
+.product-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.product-price {
+  color: var(--brand-yellow);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.product-desc {
+  color: #bdbdbd;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+.product-rating {
+  margin-bottom: 8px;
+}
+.cart-btn {
+  background: var(--brand-yellow);
+  color: var(--brand-dark);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.cart-btn:hover {
+  background: #ffd97a;
+}
+.product-empty {
+  color: #aaa;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 100%;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.page-btn {
+  background: #23272a;
+  color: #f3f3f3;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.page-btn.active, .page-btn:hover {
+  background: var(--brand-yellow);
+  color: var(--brand-dark);
+}
+
+/* 表單與會員卡片 */
+.user-form, .user-profile-card {
+  background: var(--brand-card);
+  color: #f3f3f3;
+  border-radius: 18px;
+  box-shadow: var(--brand-shadow);
+  padding: 32px 40px;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.form-title, .profile-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--brand-yellow);
+}
+.form-input, .profile-input {
+  width: 100%;
+  max-width: 340px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2d3347;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background: #1e2230;
+  color: #f5f6fa;
+}
+.form-btn, .profile-btn {
+  background: var(--brand-yellow);
+  color: var(--brand-dark);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 32px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 8px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.form-btn:hover, .profile-btn:hover {
+  background: #ffd97a;
+}
+.form-success, .profile-success {
+  color: #2ecc40;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.form-error {
+  color: #e74c3c;
+  font-weight: 700;
+  margin-top: 8px;
+}
 /* 品牌色與主視覺 */
 :root {
   --brand-yellow: #ffcb5b;
