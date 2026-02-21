@@ -5,6 +5,7 @@ import UserProfile from './UserProfile';
 import Cart from './Cart';
 import ProductUpload from './ProductUpload';
 import ProductList from './ProductList';
+import Announcement from './Announcement';
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -58,6 +59,7 @@ function App() {
 
     return (
       <div className="App">
+        <Announcement />
         {/* 主視覺區塊 */}
         <div className="hero">
           <div className="hero-title">你的市場<br /><span style={{color:'#ffcb5b'}}>Car Studio 資產</span></div>
