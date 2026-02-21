@@ -18,6 +18,7 @@ function App() {
   const [showLogin, setShowLogin] = React.useState(false);
   const [loginMode, setLoginMode] = React.useState('login'); // login or register
   const [favorites, setFavorites] = React.useState([]);
+  const [category, setCategory] = React.useState('全部');
 
   const fetchProducts = () => {
     setLoading(true);
