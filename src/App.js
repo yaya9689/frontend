@@ -15,6 +15,7 @@ function App() {
   const [page, setPage] = useState(1);
   const pageSize = 6;
   const [cart, setCart] = useState([]);
+  const [showLogin, setShowLogin] = useState(false);
 
   const fetchProducts = () => {
     setLoading(true);
