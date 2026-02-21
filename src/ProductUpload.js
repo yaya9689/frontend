@@ -40,14 +40,14 @@ function ProductUpload({ onUpload }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{marginBottom: 24}}>
-      <h2>商品上架</h2>
-      <input name="name" value={form.name} onChange={handleChange} placeholder="商品名稱" required /> <br/>
-      <textarea name="description" value={form.description} onChange={handleChange} placeholder="商品描述" required /> <br/>
-      <input name="price" value={form.price} onChange={handleChange} placeholder="價格" type="number" step="0.01" required /> <br/>
-      <input name="image_url" value={form.image_url} onChange={handleChange} placeholder="圖片網址" /> <br/>
-      <button type="submit">上架</button>
-      {status && <p style={{color: status.includes('成功') ? 'green' : 'red'}}>{status}</p>}
+    <form onSubmit={handleSubmit} className="product-upload-form">
+      <h2 className="upload-title">商品上架</h2>
+      <input name="name" value={form.name} onChange={handleChange} placeholder="商品名稱" required className="upload-input" />
+      <textarea name="description" value={form.description} onChange={handleChange} placeholder="商品描述" required className="upload-input" />
+      <input name="price" value={form.price} onChange={handleChange} placeholder="價格" type="number" step="0.01" required className="upload-input" />
+      <input name="image_url" value={form.image_url} onChange={handleChange} placeholder="圖片網址" className="upload-input" />
+      <button type="submit" className="upload-btn">上架</button>
+      {status && <p className={status.includes('成功') ? 'upload-success' : 'upload-error'}>{status}</p>}
     </form>
   );
 }
