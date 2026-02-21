@@ -1,3 +1,59 @@
+.header {
+  width: 100%;
+  background: #23283a;
+  color: #ffcb5b;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 24px 0 18px 0;
+  letter-spacing: 0.04em;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.product-tag {
+  display: inline-block;
+  background: #ffcb5b;
+  color: #23283a;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 2px 12px;
+  margin-bottom: 4px;
+}
+.fav-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.fav-btn.active {
+  color: #ffcb5b;
+}
+.fav-btn:hover {
+  color: #ffcb5b;
+}
+.cart-btn {
+  background: #ffcb5b;
+  color: #23283a;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+.cart-btn:hover {
+  background: #ffd97a;
+}
+.product-rating {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
 /* 會員註冊/登入表單 */
 .user-form {
   display: flex;
