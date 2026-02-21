@@ -1,3 +1,56 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  background: #181a1b;
+  color: #f3f3f3;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.main-row {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-bar {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  width: 320px;
+  font-size: 1rem;
+  background: #23272a;
+  color: #f3f3f3;
+}
 .cart-card {
   background: #23283a;
   color: #f5f6fa;
