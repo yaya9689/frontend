@@ -2,6 +2,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import ProductUpload from './ProductUpload';
+import Register from './Register';
+import Login from './Login';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -46,6 +48,10 @@ function App() {
   return (
     <div className="App">
       <h1>商城商品展示</h1>
+      <div style={{display:'flex',gap:'32px',justifyContent:'center',marginBottom:'40px',flexWrap:'wrap'}}>
+        <Register />
+        <Login />
+      </div>
       <ProductUpload onUpload={fetchProducts} />
       <div className="search-bar">
         <input
