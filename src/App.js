@@ -16,7 +16,6 @@ function App() {
   const pageSize = 6;
   const [cart, setCart] = useState([]);
   const [showLogin, setShowLogin] = React.useState(false);
-  const [showRegister, setShowRegister] = React.useState(false);
   const [loginMode, setLoginMode] = React.useState('login'); // login or register
 
   const fetchProducts = () => {
