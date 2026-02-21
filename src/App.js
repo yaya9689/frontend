@@ -60,7 +60,7 @@ function App() {
   return (
     <div className="App">
       <div className="header-bar">
-        <div className="header-logo">包裹</div>
+        <div className="header-logo">Car Studio</div>
         <div className="header-nav">
           <button className="header-login-btn" onClick={()=>{setShowLogin(true);setLoginMode('login')}}>登入</button>
         </div>
