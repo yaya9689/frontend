@@ -31,9 +31,9 @@ function UserProfile({ user }) {
       <h2 className="profile-title">會員資料</h2>
       {!editMode ? (
         <>
-          <div className="profile-row"><span>帳號：</span>{user.username}</div>
-          <div className="profile-row"><span>Email：</span>{user.email}</div>
-          <div className="profile-row"><span>等級：</span>{user.level}</div>
+          <div className="profile-row"><span>帳號：</span>{user?.username || '未登入'}</div>
+          <div className="profile-row"><span>Email：</span>{user?.email || '-'}</div>
+          <div className="profile-row"><span>等級：</span>{user?.level || '-'}</div>
           <button className="profile-btn" onClick={()=>setEditMode(true)}>編輯資料</button>
         </>
       ) : (
