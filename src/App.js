@@ -38,19 +38,22 @@ function App() {
       <ProductUpload onUpload={fetchProducts} />
       {loading && <p>載入中...</p>}
       {error && <p style={{color:'red'}}>{error}</p>}
-      <ul>
+      <div className="product-grid">
         {Array.isArray(products) && products.length > 0 ? (
           products.map(product => (
-            <li key={product.id}>
-              <strong>{product.name}</strong> - ${product.price}<br/>
-              <span>{product.description}</span>
-              {product.image_url && <img src={product.image_url} alt={product.name} style={{width:100}} />}
-            </li>
+            <div className="product-card" key={product.id}>
+              {product.image_url && <img src={product.image_url} alt={product.name} className="product-img" />}
+              <div className="product-info">
+                <div className="product-name">{product.name}</div>
+                <div className="product-price">${product.price}</div>
+                <div className="product-desc">{product.description}</div>
+              </div>
+            </div>
           ))
         ) : (
-          !loading && <li>暫無商品資料</li>
+          !loading && <div className="product-empty">暫無商品資料</div>
         )}
-      </ul>
+      </div>
     </div>
   );
 }
