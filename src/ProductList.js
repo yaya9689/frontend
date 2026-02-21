@@ -16,9 +16,9 @@ function ProductList({ products, loading, error, search, page, pageSize, setPage
   const isFavorite = p => p.favorite || false;
 
   return (
-    <>
-      {loading && <p>載入中...</p>}
-      {error && <p style={{color:'red'}}>{error}</p>}
+    <div style={{width:'100%'}}>
+      {loading && <p style={{textAlign:'center',color:'#ffcb5b'}}>載入中...</p>}
+      {error && <p style={{color:'red',textAlign:'center'}}>{error}</p>}
       <div className="product-grid">
         {paged.length > 0 ? (
           paged.map(product => (
@@ -56,7 +56,7 @@ function ProductList({ products, loading, error, search, page, pageSize, setPage
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

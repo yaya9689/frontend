@@ -30,14 +30,16 @@ function Register({ onRegister }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="user-form">
-      <h2 className="form-title">會員註冊</h2>
-      <input name="username" value={form.username} onChange={handleChange} placeholder="帳號" required className="form-input" />
-      <input name="email" value={form.email} onChange={handleChange} placeholder="Email" type="email" required className="form-input" />
-      <input name="password" value={form.password} onChange={handleChange} placeholder="密碼" type="password" required className="form-input" />
-      <button type="submit" className="form-btn">註冊</button>
-      {status && <p className={status.includes('成功') ? 'form-success' : 'form-error'}>{status}</p>}
-    </form>
+    <div className="user-form">
+      <form onSubmit={handleSubmit} style={{display:'flex',flexDirection:'column',gap:'12px'}}>
+        <h2 className="form-title">會員註冊</h2>
+        <input name="username" value={form.username} onChange={handleChange} placeholder="帳號" required className="form-input" />
+        <input name="email" value={form.email} onChange={handleChange} placeholder="Email" type="email" required className="form-input" />
+        <input name="password" value={form.password} onChange={handleChange} placeholder="密碼" type="password" required className="form-input" />
+        <button type="submit" className="form-btn">註冊</button>
+        {status && <p className={status.includes('成功') ? 'form-success' : 'form-error'}>{status}</p>}
+      </form>
+    </div>
   );
 }
 

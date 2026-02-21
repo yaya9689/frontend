@@ -40,11 +40,13 @@ function UserProfile() {
           <button className="profile-btn" onClick={()=>setEditMode(true)}>編輯資料</button>
         </>
       ) : (
-        <form onSubmit={handleSave}>
+        <form onSubmit={handleSave} style={{display:'flex',flexDirection:'column',gap:'10px'}}>
           <input name="username" value={form.username} onChange={handleChange} className="profile-input" />
           <input name="email" value={form.email} onChange={handleChange} className="profile-input" />
-          <button className="profile-btn" type="submit">儲存</button>
-          <button className="profile-btn" type="button" onClick={()=>setEditMode(false)}>取消</button>
+          <div style={{display:'flex',gap:'10px'}}>
+            <button className="profile-btn" type="submit">儲存</button>
+            <button className="profile-btn" type="button" onClick={()=>setEditMode(false)}>取消</button>
+          </div>
         </form>
       )}
       {status && <p className="profile-success">{status}</p>}
