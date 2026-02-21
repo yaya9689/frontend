@@ -17,6 +17,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [showLogin, setShowLogin] = React.useState(false);
   const [loginMode, setLoginMode] = React.useState('login'); // login or register
+  const [favorites, setFavorites] = React.useState([]);
 
   const fetchProducts = () => {
     setLoading(true);
@@ -42,8 +43,6 @@ function App() {
     fetchProducts();
   }, []);
 
-  const [category, setCategory] = React.useState('全部');
-
   const handleAddToCart = product => {
     setCart(prev => {
       if (prev.find(item => item.id === product.id)) return prev;
@@ -55,6 +54,9 @@ function App() {
   };
   const handleCheckout = () => {
     setCart([]);
+  };
+  const handleToggleFavorite = (id) => {
+    setFavorites(prev => prev.includes(id) ? prev.filter(fid => fid !== id) : [...prev, id]);
   };
 
   return (
@@ -110,7 +112,9 @@ function App() {
         pageSize={pageSize}
         setPage={setPage}
         onAddToCart={handleAddToCart}
+        onToggleFavorite={handleToggleFavorite}
         category={category}
+        favorites={favorites}
       />
       {/* 會員功能區塊（橫向排列） */}
       <div className="main-row" style={{alignItems:'flex-start'}}>
