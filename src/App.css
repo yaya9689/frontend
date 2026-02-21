@@ -441,3 +441,21 @@ body {
 .login-modal-close:hover {
   background: #ffd97a;
 }
+
+/* 登入/註冊切換按鈕樣式 */
+.login-modal-switch {
+  background: #23272a;
+  color: #ffcb5b;
+  border: 1px solid #ffcb5b;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s;
+}
+.login-modal-switch:hover {
+  background: #ffcb5b;
+  color: #23272a;
+}
