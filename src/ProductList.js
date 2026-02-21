@@ -3,10 +3,10 @@ import React from 'react';
 function ProductList({ category = '全部', search = '', favorites = [], onToggleFavorite }) {
   // 假資料 demo
   const products = [
-    { id: 1, name: '雷亞斯49', category: '車輛', desc: '收費站', price: 49, img: 'https://via.placeholder.com/320x160?text=車輛', author: 'DEV SHOP', rating: 5 },
-    { id: 2, name: '雷亞斯20', category: '軍事', desc: '軍事品', price: 20, img: 'https://via.placeholder.com/320x160?text=軍事', author: 'ARC 工作室', rating: 4 },
-    { id: 3, name: '小學二校區', category: '教育背景', desc: '校園', price: 800, img: 'https://via.placeholder.com/320x160?text=校園', author: '日型工作室', rating: 5 },
-    { id: 4, name: '奧迪A6 2020', category: '車輛', desc: '汽車', price: 55, img: 'https://via.placeholder.com/320x160?text=汽車', author: '日型工作室', rating: 4 },
+    { id: 1, name: '雷亞斯49', category: '車輛', desc: '收費站', price: 49, img: '/no-image.png', author: 'DEV SHOP', rating: 5 },
+    { id: 2, name: '雷亞斯20', category: '軍事', desc: '軍事品', price: 20, img: '/no-image.png', author: 'ARC 工作室', rating: 4 },
+    { id: 3, name: '小學二校區', category: '教育背景', desc: '校園', price: 800, img: '/no-image.png', author: '日型工作室', rating: 5 },
+    { id: 4, name: '奧迪A6 2020', category: '車輛', desc: '汽車', price: 55, img: '/no-image.png', author: '日型工作室', rating: 4 },
   ];
 
   // 分類與搜尋過濾
