@@ -1,4 +1,10 @@
-
+import React, { useState, useEffect } from 'react';
+import Register from './Register';
+import Login from './Login';
+import UserProfile from './UserProfile';
+import Cart from './Cart';
+import ProductUpload from './ProductUpload';
+import ProductList from './ProductList';
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
