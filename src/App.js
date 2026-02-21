@@ -60,9 +60,17 @@ function App() {
       <div className="header-bar">
         <div className="header-logo">包裹</div>
         <div className="header-nav">
-          <button className="header-login-btn">登入</button>
+          <button className="header-login-btn" onClick={()=>setShowLogin(true)}>登入</button>
         </div>
       </div>
+      {showLogin && (
+        <div className="login-modal-bg" onClick={()=>setShowLogin(false)}>
+          <div className="login-modal" onClick={e=>e.stopPropagation()}>
+            <Login />
+            <button className="login-modal-close" onClick={()=>setShowLogin(false)}>關閉</button>
+          </div>
+        </div>
+      )}
       <Announcement />
       <div className="hero">
         <div className="hero-title">
@@ -99,7 +107,6 @@ function App() {
       <div className="main-row" style={{alignItems:'flex-start'}}>
         <div style={{display:'flex',gap:'32px',flex:2}}>
           <Register />
-          <Login />
           <UserProfile />
         </div>
         <div style={{minWidth:340,maxWidth:400,flex:1}}>
