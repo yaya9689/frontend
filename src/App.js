@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Register from './Register';
 import Login from './Login';
 import UserProfile from './UserProfile';
 import Cart from './Cart';
@@ -115,7 +114,6 @@ function App() {
       {/* 會員功能區塊（橫向排列） */}
       <div className="main-row" style={{alignItems:'flex-start'}}>
         <div style={{display:'flex',gap:'32px',flex:2}}>
-          <Register />
           <UserProfile />
         </div>
         <div style={{minWidth:340,maxWidth:400,flex:1}}>
