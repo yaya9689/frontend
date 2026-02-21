@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import OrderHistory from './OrderHistory';
 
-function UserProfile() {
-  const [user, setUser] = useState(null);
+function UserProfile({ user }) {
   const [loading, setLoading] = useState(true);
   const [editMode, setEditMode] = useState(false);
   const [form, setForm] = useState({ username: '', email: '' });
@@ -10,8 +10,6 @@ function UserProfile() {
   useEffect(() => {
     // 假資料，實際應從後端取得
     setTimeout(() => {
-      setUser({ username: 'testuser', email: 'test@mail.com', level: '一般會員' });
-      setForm({ username: 'testuser', email: 'test@mail.com' });
       setLoading(false);
     }, 500);
   }, []);
@@ -23,7 +21,6 @@ function UserProfile() {
   const handleSave = e => {
     e.preventDefault();
     setStatus('儲存成功');
-    setUser({ ...user, ...form });
     setEditMode(false);
   };
 
@@ -50,6 +47,7 @@ function UserProfile() {
         </form>
       )}
       {status && <p className="profile-success">{status}</p>}
+      <OrderHistory userId={user?.id || 1} />
     </div>
   );
 }
