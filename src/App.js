@@ -1,12 +1,4 @@
 
-import './App.css';
-import { useEffect, useState } from 'react';
-import ProductUpload from './ProductUpload';
-import Register from './Register';
-import Login from './Login';
-import ProductList from './ProductList';
-import UserProfile from './UserProfile';
-
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,6 +6,7 @@ function App() {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const pageSize = 6;
+  const [cart, setCart] = useState([]);
 
   const fetchProducts = () => {
     setLoading(true);
@@ -39,7 +32,21 @@ function App() {
     fetchProducts();
   }, []);
 
-  // ...existing code...
+  // 加入購物車
+  const handleAddToCart = product => {
+    setCart(prev => {
+      if (prev.find(item => item.id === product.id)) return prev;
+      return [...prev, product];
+    });
+  };
+  // 移除購物車
+  const handleRemoveFromCart = id => {
+    setCart(prev => prev.filter(item => item.id !== id));
+  };
+  // 結帳
+  const handleCheckout = () => {
+    setCart([]);
+  };
 
   return (
     <div className="App">
@@ -48,6 +55,7 @@ function App() {
         <Register />
         <Login />
         <UserProfile />
+        <Cart cartItems={cart} onRemove={handleRemoveFromCart} onCheckout={handleCheckout} />
       </div>
       <ProductUpload onUpload={fetchProducts} />
       <div className="search-bar">
@@ -66,6 +74,7 @@ function App() {
         page={page}
         pageSize={pageSize}
         setPage={setPage}
+        onAddToCart={handleAddToCart}
       />
     </div>
   );

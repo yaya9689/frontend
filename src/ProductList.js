@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductList({ products, loading, error, search, page, pageSize, setPage }) {
+function ProductList({ products, loading, error, search, page, pageSize, setPage, onAddToCart }) {
   // 搜尋與分頁
   const filtered = products.filter(
     p => p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -36,7 +36,7 @@ function ProductList({ products, loading, error, search, page, pageSize, setPage
                   {Array.from({length: getRating(product)}, (_, i) => <span key={i} style={{color:'#ffcb5b'}}>★</span>)}
                   <span style={{color:'#aaa',marginLeft:6}}>{getReviews(product)} 篇評價</span>
                 </div>
-                <button className="cart-btn">加入購物車</button>
+                <button className="cart-btn" onClick={()=>onAddToCart(product)}>加入購物車</button>
               </div>
             </div>
           ))
