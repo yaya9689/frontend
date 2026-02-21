@@ -66,16 +66,18 @@ function App() {
           <button className="hero-btn" style={{background:'#23272a',color:'#ffcb5b',border:'2px solid #ffcb5b'}}>開始販售</button>
         </div>
 
-        {/* 會員、購物車、上架區塊 */}
-        <div className="main-row">
-          <div style={{flex:2,display:'flex',gap:'32px'}}>
+        {/* 會員功能區塊（橫向排列） */}
+        <div className="main-row" style={{alignItems:'flex-start'}}>
+          <div style={{display:'flex',gap:'32px',flex:2}}>
             <Register />
             <Login />
             <UserProfile />
           </div>
-          <Cart cartItems={cart} onRemove={handleRemoveFromCart} onCheckout={handleCheckout} />
+          <div style={{minWidth:340,maxWidth:400,flex:1}}>
+            <Cart cartItems={cart} onRemove={handleRemoveFromCart} onCheckout={handleCheckout} />
+            <ProductUpload onUpload={fetchProducts} />
+          </div>
         </div>
-        <ProductUpload onUpload={fetchProducts} />
 
         {/* 搜尋列 */}
         <div className="search-bar">
