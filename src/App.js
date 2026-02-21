@@ -1,13 +1,15 @@
 
 import './App.css';
 import { useEffect, useState } from 'react';
+import ProductUpload from './ProductUpload';
 
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  const fetchProducts = () => {
+    setLoading(true);
     fetch('https://car-studio-production.up.railway.app/api/products')
       .then(res => res.json())
       .then(data => {
@@ -24,11 +26,16 @@ function App() {
         setProducts([]);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchProducts();
   }, []);
 
   return (
     <div className="App">
       <h1>商城商品展示</h1>
+      <ProductUpload onUpload={fetchProducts} />
       {loading && <p>載入中...</p>}
       {error && <p style={{color:'red'}}>{error}</p>}
       <ul>
