@@ -5,6 +5,7 @@ import ProductUpload from './ProductUpload';
 import Register from './Register';
 import Login from './Login';
 import ProductList from './ProductList';
+import UserProfile from './UserProfile';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -46,6 +47,7 @@ function App() {
       <div style={{display:'flex',gap:'32px',justifyContent:'center',marginBottom:'40px',flexWrap:'wrap'}}>
         <Register />
         <Login />
+        <UserProfile />
       </div>
       <ProductUpload onUpload={fetchProducts} />
       <div className="search-bar">
