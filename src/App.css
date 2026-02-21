@@ -1,6 +1,6 @@
 /* 保留純白色極簡主題，優化排版與RWD */
 body {
-  background: #f5f6fa;
+  background: #f7f8fa;
   font-family: 'Noto Sans', 'Inter', Arial, sans-serif;
   margin: 0;
   color: #222;
@@ -13,15 +13,17 @@ h1 {
 }
 .App {
   text-align: center;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 48px 0 56px 0;
+  padding: 56px 0 64px 0;
 }
+
+/* 主區塊現代化排版 */
 .main-row {
   display: flex;
-  gap: 48px;
+  gap: 56px;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 64px;
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -33,41 +35,45 @@ h1 {
   letter-spacing: 0.01em;
   text-align: left;
 }
+/* 卡片、表單、商品現代化設計 */
 .user-form, .user-profile-card, .product-upload-form, .cart-card {
   background: #fff;
   color: #222;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 36px 44px;
-  margin-bottom: 44px;
-  max-width: 420px;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 44px 48px;
+  margin-bottom: 48px;
+  max-width: 440px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  border: 1.5px solid #ececec;
+  align-items: center;
+  border: 1.5px solid #f0f1f3;
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-  margin-top: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 32px;
+  margin-top: 40px;
+  justify-items: center;
 }
 .product-card {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
-  padding: 32px 24px 20px 24px;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 40px 32px 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 220px;
+  min-height: 260px;
   transition: box-shadow 0.2s;
-  border: 1.5px solid #ececec;
+  border: 1.5px solid #f0f1f3;
+  width: 100%;
+  max-width: 370px;
 }
 .product-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.13);
 }
 .form-title, .profile-title, .upload-title {
   font-size: 1.15rem;
@@ -331,8 +337,8 @@ h1 {
 }
 .product-img {
   display: block;
-  margin-bottom: 18px;
-  border-radius: 14px;
+  margin-bottom: 24px;
+  border-radius: 18px;
   max-width: 120px;
   max-height: 120px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -340,11 +346,13 @@ h1 {
 .product-info {
   width: 100%;
   text-align: center;
+  margin-bottom: 8px;
 }
 .product-name {
   font-size: 1.18rem;
   font-weight: 700;
   margin-bottom: 8px;
+  letter-spacing: 0.01em;
 }
 .product-price {
   font-size: 1.08rem;
@@ -401,34 +409,46 @@ h1 {
     align-items: stretch;
   }
   .App {
-    padding: 24px 0 32px 0;
-    max-width: 98vw;
+    padding: 16px 0 24px 0;
+    max-width: 99vw;
   }
   .product-grid {
-    gap: 20px;
+    gap: 20px 8px;
   }
-}
-@media (max-width: 600px) {
-  .App {
-    padding: 16px 0 24px 0;
-    max-width: 100vw;
-  }
-  .main-row {
-    gap: 12px;
+  .product-card {
+    max-width: 98vw;
+    padding: 24px 8px 16px 8px;
+    border-radius: 18px;
   }
   .user-form, .user-profile-card, .product-upload-form, .cart-card {
     padding: 18px 6vw;
     max-width: 98vw;
     margin-bottom: 24px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .App {
+    padding: 8px 0 12px 0;
+    max-width: 100vw;
+  }
+  .main-row {
+    gap: 8px;
+  }
+  .user-form, .user-profile-card, .product-upload-form, .cart-card {
+    padding: 10px 2vw;
+    max-width: 99vw;
+    margin-bottom: 12px;
     border-radius: 12px;
   }
   .product-card {
-    padding: 18px 8px 12px 8px;
+    padding: 10px 2vw 8px 2vw;
     border-radius: 12px;
+    max-width: 99vw;
   }
   .product-img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 8px;
   }
   .search-input {
