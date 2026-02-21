@@ -551,3 +551,88 @@ body {
 .product-card {
   position: relative;
 }
+
+/* 後台管理樣式 */
+.admin-login-card {
+  background: #23272a;
+  color: #f3f3f3;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 44px 48px;
+  max-width: 420px;
+  margin: 64px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffcb5b;
+  margin-bottom: 18px;
+}
+.admin-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #23272a;
+  font-size: 1.08rem;
+  background: #23272a;
+  color: #f3f3f3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.admin-btn {
+  background: #ffcb5b;
+  color: #23272a;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 36px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.admin-btn:hover {
+  background: #ffd97a;
+}
+.admin-panel {
+  background: #23272a;
+  color: #f3f3f3;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 44px 48px;
+  max-width: 900px;
+  margin: 64px auto;
+}
+.admin-tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.admin-tab {
+  background: #23272a;
+  color: #ffcb5b;
+  border: 1px solid #23272a;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s;
+}
+.admin-tab.active {
+  background: #ffcb5b;
+  color: #23272a;
+  border: 1px solid #ffcb5b;
+}
+.admin-tab:hover:not(.active) {
+  background: #23272a;
+  color: #ffd97a;
+}
+.admin-content {
+  margin-top: 24px;
+  font-size: 1.08rem;
+}
