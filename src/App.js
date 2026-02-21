@@ -58,14 +58,26 @@ function App() {
 
     return (
       <div className="App">
-        <h1>商城商品展示</h1>
-        <div style={{display:'flex',gap:'32px',justifyContent:'center',marginBottom:'40px',flexWrap:'wrap'}}>
-          <Register />
-          <Login />
-          <UserProfile />
+        {/* 主視覺區塊 */}
+        <div className="hero">
+          <div className="hero-title">你的市場<br /><span style={{color:'#ffcb5b'}}>Car Studio 資產</span></div>
+          <div className="hero-sub">發掘來自值得信賴創作者的高品質車輛資產，自信地買賣。</div>
+          <button className="hero-btn">探索產品</button>
+          <button className="hero-btn" style={{background:'#23272a',color:'#ffcb5b',border:'2px solid #ffcb5b'}}>開始販售</button>
+        </div>
+
+        {/* 會員、購物車、上架區塊 */}
+        <div className="main-row">
+          <div style={{flex:2,display:'flex',gap:'32px'}}>
+            <Register />
+            <Login />
+            <UserProfile />
+          </div>
           <Cart cartItems={cart} onRemove={handleRemoveFromCart} onCheckout={handleCheckout} />
         </div>
         <ProductUpload onUpload={fetchProducts} />
+
+        {/* 搜尋列 */}
         <div className="search-bar">
           <input
             className="search-input"
@@ -74,6 +86,8 @@ function App() {
             onChange={e => { setSearch(e.target.value); setPage(1); }}
           />
         </div>
+
+        {/* 商品列表 */}
         <ProductList
           products={products}
           loading={loading}
@@ -86,5 +100,6 @@ function App() {
         />
       </div>
     );
-}
-export default App;
+  }
+
+  export default App;
