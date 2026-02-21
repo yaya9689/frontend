@@ -528,3 +528,26 @@ body {
   background: #ffcb5b;
   color: #23272a;
 }
+
+/* 商品收藏愛心按鈕樣式 */
+.product-fav-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #ffd97a;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 2;
+}
+.product-fav-btn.active {
+  color: #ffcb5b;
+}
+.product-fav-btn:hover {
+  color: #ffcb5b;
+}
+.product-card {
+  position: relative;
+}

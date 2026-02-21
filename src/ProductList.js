@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductList({ category = '全部', search = '' }) {
+function ProductList({ category = '全部', search = '', favorites = [], onToggleFavorite }) {
   // 假資料 demo
   const products = [
     { id: 1, name: '雷亞斯49', category: '車輛', desc: '收費站', price: 49, img: 'https://via.placeholder.com/320x160?text=車輛', author: 'DEV SHOP', rating: 5 },
@@ -22,6 +22,9 @@ function ProductList({ category = '全部', search = '' }) {
           <div key={p.id} className="product-card">
             <img className="product-img" src={p.img} alt={p.name} />
             <div className="product-label">{p.category}</div>
+            <button className={`product-fav-btn${favorites.includes(p.id) ? ' active' : ''}`} onClick={()=>onToggleFavorite(p.id)}>
+              {favorites.includes(p.id) ? '♥' : '♡'}
+            </button>
             <div className="product-name">{p.name}</div>
             <div className="product-desc">{p.desc}</div>
             <div className="product-price">雷亞幣 {p.price}</div>
