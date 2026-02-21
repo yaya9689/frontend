@@ -349,3 +349,56 @@ body {
   text-align: center;
   margin-top: 12px;
 }
+
+/* Header Bar */
+.header-bar {
+  width: 100%;
+  background: #181a1b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+  box-sizing: border-box;
+  border-bottom: 1.5px solid #23272a;
+}
+.header-logo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffcb5b;
+  letter-spacing: 0.08em;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header-login-btn {
+  background: #ffcb5b;
+  color: #23272a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 28px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s;
+}
+.header-login-btn:hover {
+  background: #ffd97a;
+}
+@media (max-width: 900px) {
+  .header-bar {
+    padding: 0 8px;
+    height: 48px;
+  }
+  .header-logo {
+    font-size: 1.1rem;
+  }
+  .header-login-btn {
+    padding: 6px 16px;
+    font-size: 0.98rem;
+    border-radius: 6px;
+  }
+}
