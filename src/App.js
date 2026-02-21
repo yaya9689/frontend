@@ -6,6 +6,7 @@ import ProductUpload from './ProductUpload';
 import ProductList from './ProductList';
 import Announcement from './Announcement';
 import CategorySearch from './CategorySearch';
+import Register from './Register';
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
