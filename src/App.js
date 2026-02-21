@@ -11,7 +11,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = React.useState('');
   const [page, setPage] = useState(1);
   const pageSize = 6;
   const [cart, setCart] = useState([]);
@@ -58,6 +58,21 @@ function App() {
   return (
     <div className="App">
       <Announcement />
+      <div className="hero">
+        <div className="hero-title">
+          你的市場<br />
+          <span className="hero-brand">Roblox 資產</span>
+        </div>
+        <div className="hero-sub">
+          發掘來自值得信賴創作者的高品質 Roblox 資產，自信地買賣。
+        </div>
+        <div className="hero-btn-group">
+          <button className="hero-btn primary">探索產品</button>
+          <button className="hero-btn secondary">開始銷售</button>
+        </div>
+      </div>
+      <div className="divider" />
+      <div className="section-title main-section-title">近期發行</div>
       <CategorySearch
         onCategoryChange={setCategory}
         onSearch={setSearch}
